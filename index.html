@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>استطلاع الرأي</title>
+  <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-database.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="surveyContainer">
+    <h1>استطلاع الرأي</h1>
+    <form id="surveyForm">
+      <label for="name">الاسم:</label>
+      <input type="text" id="name" required><br><br>
+      
+      <label for="q1">السؤال 1: ماذا تعني لك استراتيجية حل المشكلات؟</label>
+      <input type="text" id="q1" required><br><br>
+
+      <label for="q2">السؤال 2: ما هي أهمية هذه الاستراتيجية؟</label>
+      <input type="text" id="q2" required><br><br>
+
+      <label for="q3">السؤال 3: كيف يمكن تطبيقها في حياتك اليومية؟</label>
+      <input type="text" id="q3" required><br><br>
+
+      <label for="q4">السؤال 4: ما هي أبرز فوائدها؟</label>
+      <input type="text" id="q4" required><br><br>
+
+      <button type="submit">إرسال</button>
+    </form>
+
+    <div id="thankYouMessage" style="display:none;">
+      <p>شكراً لملء الاستطلاع، <span id="userName"></span>!</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
